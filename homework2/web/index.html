@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+Copyright: Jenny Faig & Tyler LaVecchia
+-->
+<html>
+    <head>
+        <title>Future Value Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/calculator.css">
+    </head>
+    <body>
+        <form action="CalculationServlet" method="post">
+            <h1>Future Value Calculator</h1>
+            <input type="hidden" name="action" value="add">
+            <p><label class="amount">Investment Amount </label><input name="principal" type="number" min="0" autofocus required/></p>
+            <p><label>Yearly Interest Rate </label><input name="rate" type="number" min="0" required/></p>
+            <p><label class="numYears">Number of Years </label><input name="years" type="number" min="0" required  placeholder="Integer number of years"/></p>
+            <p class="SubmitButton"><input class="button" type="submit" value="Calculate"/></p>
+          </form>
+        <footer>
+            <p class="copyright"> &copy; 2016, Jenny Faig &amp; Tyler LaVecchia </p>
+        </footer>
+    </body>
+</html>
