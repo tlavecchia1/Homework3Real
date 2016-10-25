@@ -5,6 +5,7 @@
  */
 package edu.elon.calculator;
 
+import edu.elon.business.Calculation;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -49,7 +50,6 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
         else {
             message = "";
             url = "solved.html";
-            CalculationDB.insert(calculation);
         }
         request.setAttribute("calculation", calculation);
         request.setAttribute("message", message);

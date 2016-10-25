@@ -11,6 +11,7 @@ package edu.elon.business;
  */
 
 import java.io.Serializable;
+import java.text.NumberFormat;
 
 public class Calculation implements Serializable{
     private double principal;
@@ -51,5 +52,12 @@ public class Calculation implements Serializable{
     
     public void setYears(Integer years) {
         this.years = years;
+    }
+    
+    public Double getFutureValue() {
+        rate = rate/100;
+        double futureValue = principal*((1+rate)^years);
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        return currency.format(futureValue);
     }
 }
