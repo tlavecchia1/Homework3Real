@@ -18,14 +18,13 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Jenny Faig & Tyler LaVecchia
  */
-@WebServlet(name = "CalculationServlet", urlPatterns = {"/CalculationServlet"})
 public class CalculationServlet extends HttpServlet {
 
 @Override
 protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
 
-    String url = "/index.html";
+    String url = "/form.jsp";
     
     String action = request.getParameter("action");
     if (action == null) {
@@ -33,23 +32,27 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
     }
     
     if (action.equals("join")) {
-        url = "/index.html";
+        url = "/form.jsp";
     }
     else if (action.equals("add")) {
-        String principal = request.getParameter("principal");
-        String rate = request.getParameter("rate");
-        String years = request.getParameter("years");
+        String p = request.getParameter("principal");
+        String r = request.getParameter("rate");
+        String y = request.getParameter("years");
+        
+        Double principal = Double.parseDouble(p);
+        Double rate = Double.parseDouble(r);
+        Integer years = Integer.parseInt(y);
         
         Calculation calculation = new Calculation(principal, rate, years);
         
         String message;
-        if (principal == null || rate == null || years == null || principal.isEmpty() || rate.isEmpty() || years.isEmpty()) {
+        if (p == null || r == null || y == null || p.isEmpty() || r.isEmpty() || y.isEmpty()) {
             message = "Please fill out all three text boxes.";
-            url = "/index.html";
+            url = "/form.jsp";
         }
         else {
             message = "";
-            url = "solved.html";
+            url = "/return.jsp";
         }
         request.setAttribute("calculation", calculation);
         request.setAttribute("message", message);
