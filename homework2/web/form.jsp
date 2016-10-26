@@ -2,7 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/includes/header.html" />
 
-<form action="/homework2/calculate" method="post">
+<form action="calculate" method="post">
     <h1>Future Value Calculator</h1>
     <input type="hidden" name="action" value="add">
     <p><label class="amount">Investment Amount </label><input name="principal" type="number" min="0" autofocus required/></p>
