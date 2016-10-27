@@ -1,9 +1,9 @@
 /*
-Copyright: Jenny Faig & Tyler LaVecchia
+Copyright: 2016 Jenny Faig & Tyler LaVecchia
 */
 
 html {
-  font-family:"Trebuchet MS",Arial,sans-serif;
+  font-family:'Trebuchet MS',Arial,sans-serif;
 }
 
 @media screen and (min-width: 676px) {
@@ -42,7 +42,7 @@ html {
   }
 
   input {
-    width: 50%;
+    width: 45%;
   }
 
   .button {
@@ -63,15 +63,15 @@ html {
   }
 
   .returnRate {
-    margin-left: 6.8em;
+    margin-left: 6.4em;
   }
 
   .returnYears {
-    margin-left: 8.3em;
+    margin-left: 7.9em;
   }
 
   .futureVal {
-    margin-left: 10em;
+    margin-left: 9.6em;
   }
 
   .returnAmountNum,
@@ -81,7 +81,7 @@ html {
     margin-left: 1em;
   }
   p {
-    margin-left: 1em;
+    margin-left: 2em;
   }
 }
 
@@ -166,7 +166,7 @@ html {
   }
 
   p {
-    margin-left: 1em;
+    margin-left: 2em;
   }
 }
 
@@ -228,29 +228,34 @@ html {
   }
 
   .returnAmount {
-    margin-left: 1.5em;
+    font-size: .8em;
+    margin-left: 1.7em;
   }
 
   .returnRate {
-    margin-left: 1.3em;
+    font-size: .8em;
+    margin-left: 1.4em;
   }
 
   .returnYears {
-    margin-left: 2.7em;
+    font-size: .8em;
+    margin-left: 2.8em;
   }
 
   .futureVal {
-    margin-left: 4.3em;
+    font-size: .8em;
+    margin-left: 4.4em;
   }
 
   .returnAmountNum,
   .returnRateNum,
   .returnYearsNum,
   .futureValNum {
-    margin-left: 1em;
+    font-size: .8em;
+    margin-left: .4em;
   }
 
   p {
-    margin-left: 1em;
+    margin-left: 2em;
   }
 }

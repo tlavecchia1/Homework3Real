@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package edu.elon.business;
-
 /**
  *
- * @author jfaig & tlavecchia
+ * Copyright: 2016 Jenny Faig & Tyler LaVecchia
  */
+
+package edu.elon.business;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
