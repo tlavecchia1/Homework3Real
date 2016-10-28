@@ -7,7 +7,8 @@ Copyright: 2016 Jenny Faig & Tyler LaVecchia
 
 <form method="post">
   <h1>Future Value Calculator</h1>
-  <jsp:useBean id="calculation" scope="request" class="edu.elon.business.Calculation" />
+  <jsp:useBean id="calculation" 
+               scope="request" class="edu.elon.business.Calculation" />
   <label class="returnAmount">Investment Amount:</label>
   <span class="returnAmountNum">
     <jsp:getProperty name="calculation" property="principal"/>
