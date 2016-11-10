@@ -5,12 +5,19 @@
         web-jsptaglibrary_2_0.xsd">
 
     <tlib-version>1.0</tlib-version>
-    <short-name>murach</short-name>
-    <uri>/WEB-INF/currencyFormat.tld</uri>
+    <short-name>currencyFormat</short-name>
+    <uri>/web/currencyFormat.tld</uri>
 
     <tag>
-        <name>currencyFormat.tld</name>
-        <tagclass>edu.elon.currencyFormat.tld</tagclass>
+        <name>currencyFormat</name>
+        <tagclass>edu.elon.homework3.currencyFormat</tagclass>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>currency</name>
+            <required>true</required>
+            <type>String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
     </tag>
 
 

@@ -6,12 +6,12 @@
 package edu.elon.business;
 
 import java.io.Serializable;
-import java.text.NumberFormat;
 
 public class Calculation implements Serializable{
     private double principal;
     private double rate;
     private int years;
+    private double[] futureValues;
     
     public Calculation() {
         principal = 0;
@@ -23,11 +23,11 @@ public class Calculation implements Serializable{
         this.principal = principal;
         this.rate = rate;
         this.years = years;
+        this.futureValues = new double[years];
     }
     
-    public String getPrincipal() {
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
-        return currency.format(principal);
+    public Double getPrincipal() {
+        return principal;
     }
     
     public void setPrincipal(Double principal) {
@@ -50,16 +50,15 @@ public class Calculation implements Serializable{
         this.years = years;
     }
     
-    public Double getFutureValue() {
+    public double[] getFutureValue() {
         Double futureValue = 0.0;
         Double newRate = rate/100;
-        for (int i = 0; i<years;i++){
-            futureValue = principal*Math.pow((1+newRate),years);
-            
-            
+        for (int i = 1; i<years+1; i++){
+            futureValue = principal*Math.pow((1+newRate),i);
+            futureValues[i-1] = futureValue;
         }
         
-        //array of doubles
-        return futureValue;
+        return futureValues;
+        
     }
 }

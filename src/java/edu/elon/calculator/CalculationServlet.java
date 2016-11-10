@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class CalculationServlet extends HttpServlet {
 
@@ -37,6 +38,10 @@ public class CalculationServlet extends HttpServlet {
       Integer years = Integer.parseInt(y);
 
       Calculation calculation = new Calculation(principal, rate, years);
+      
+      HttpSession session = request.getSession();
+      session.setAttribute("calculation", calculation);
+      
 
       String message;
       if (p == null || r == null || y == null || p.isEmpty()

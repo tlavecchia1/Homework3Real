@@ -6,8 +6,9 @@ html {
   font-family:'Trebuchet MS',Arial,sans-serif;
 }
 
-@media screen and (min-width: 676px) {
 
+@media screen and (min-width: 676px) {
+  
   body {
     align-content: center;
     margin-left: 10%;
@@ -20,6 +21,7 @@ html {
     border-color: RGB(0,0,128);
     border-style: solid;
   }
+
 
   h1 {
     color: RGB(0,0,128);

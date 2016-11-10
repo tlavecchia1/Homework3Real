@@ -20,7 +20,7 @@
   </error-page>
    
   <welcome-file-list>
-    <welcome-file>calculate</welcome-file>
+    <welcome-file>form.jsp</welcome-file>
   </welcome-file-list>
     
   <session-config>

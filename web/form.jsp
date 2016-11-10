@@ -10,11 +10,11 @@ Copyright: 2016 Jenny Faig & Tyler LaVecchia
   <input type="hidden" name="action" value="add">
   <p>
       <label class="amount">Investment Amount </label>
-      <input name="principal" type="number" min="0" autofocus required/>
+      <input name="principal" type="number" min="0" value="${calculation.principal}" autofocus required/>
   </p>
   <p>
       <label>Yearly Interest Rate </label>
-      <input name="rate" type="number" min="0" required/>
+      <input name="rate" type="number" min="0" value="${calculation.rate}" required/>
   </p>
   <p>
       <label class="numYears">Number of Years </label>
