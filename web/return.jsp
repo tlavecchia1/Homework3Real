@@ -7,25 +7,26 @@ Copyright: 2016 Jenny Faig & Tyler LaVecchia
 
 <form method="post">
   <h1>Future Value Calculator</h1>
-  <jsp:useBean id="calculation" 
-               scope="request" class="edu.elon.business.Calculation" />
+
   <label class="returnAmount">Investment Amount:</label>
   <span class="returnAmountNum">
-    <jsp:getProperty name="calculation" property="principal"/>
+    ${calculation.principal}
   </span><br>
   <label class="returnRate">Yearly Interest Rate:</label>
   <span class="returnRateNum">
-    <jsp:getProperty name="calculation" property="rate"/>
+    ${calculation.rate}
   </span><br>
   <label class="returnYears">Number of Years:</label>
   <span class="returnYearsNum">
-    <jsp:getProperty name="calculation" property="years"/>
+    ${calculation.years}
   </span><br>
   <label class="futureVal">Future Value:</label>
   <span class="futureValNum">
-    <jsp:getProperty name="calculation" property="futureValue"/>
+    ${calculation.futurevalue}
   </span>
   <p></p>
+  <a href="form.jsp">
+      return calculator</a>
 </form>
   
 <c:import url="/includes/footer.html" />

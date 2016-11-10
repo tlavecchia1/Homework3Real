@@ -50,10 +50,16 @@ public class Calculation implements Serializable{
         this.years = years;
     }
     
-    public String getFutureValue() {
+    public Double getFutureValue() {
+        Double futureValue = 0.0;
         Double newRate = rate/100;
-        double futureValue = principal*Math.pow((1+newRate),years);
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
-        return currency.format(futureValue);
+        for (int i = 0; i<years;i++){
+            futureValue = principal*Math.pow((1+newRate),years);
+            
+            
+        }
+        
+        //array of doubles
+        return futureValue;
     }
 }
