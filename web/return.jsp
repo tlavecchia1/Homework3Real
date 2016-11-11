@@ -1,5 +1,5 @@
 <%--
-Copyright: 2016 Jenny Faig & Tyler LaVecchia
+Copyright: 2016 Ryan Kugel & Tyler LaVecchia & Jenny Faig
 --%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -21,18 +21,22 @@ Copyright: 2016 Jenny Faig & Tyler LaVecchia
   <span class="returnYearsNum">
     ${calculation.years}
   </span><br>
-  
+  <table>
+      <tr>
+          <th class="Year">Year</th>
+          <th class="Value">Value</th>
+      </tr>
+  </table>
   <ul style="list-style-type: none">
       <c:forEach items="${calculation.futureValue}" var="value" varStatus="status">
         <li>
-            ${status.count} <elon:currencyFormat currency="${value}"/>
+            <span class="count"> ${status.count}</span> <span class="money"><elon:currencyFormat currency="${value}"/></span>
         </li>
       </c:forEach>
     </ul>
-  </span>
   <p></p>
   <a href="form.jsp">
-      return calculator</a>
+      Return to Calculator</a>
 </form>
   
 <c:import url="/includes/footer.html" />

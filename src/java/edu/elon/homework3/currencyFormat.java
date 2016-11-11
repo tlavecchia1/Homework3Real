@@ -1,3 +1,7 @@
+/**
+ *
+ * Copyright: 2016 Ryan Kugel & Tyler LaVecchia
+ */
 package edu.elon.homework3;
 
 import java.io.IOException;

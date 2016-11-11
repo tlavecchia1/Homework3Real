@@ -1,5 +1,5 @@
 <%--
-Copyright: 2016 Jenny Faig & Tyler LaVecchia
+Copyright: 2016 Ryan Kugel & Tyler LaVecchia & Jenny Faig
 --%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

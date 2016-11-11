@@ -1,6 +1,6 @@
 /**
  *
- * Copyright: 2016 Jenny Faig & Tyler LaVecchia
+ * Copyright: 2016 Ryan Kugel & Tyler LaVecchia & Jenny Faig
  */
 package edu.elon.calculator;
 
